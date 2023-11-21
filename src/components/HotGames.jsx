@@ -17,8 +17,8 @@ export default function HotGames() {
         <h1 className="text-center bold display-3 mb-4">Hot Games List</h1>
         <Container fluid>
           <Row className="games-list">
-            {games.map(games => {
-              const { gameId, name, thumbnail } = games
+            {games.map(game => {
+              const { gameId, name, thumbnail } = game
               return (
                 <Col
                   as={Link}
