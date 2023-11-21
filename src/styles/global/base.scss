@@ -1,0 +1,77 @@
+body{
+  margin: 0;
+  background-color: $light;
+  color: $pink;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  @extend %flex-fill;
+}
+
+// * Global classes
+
+.spinner-wrapper{
+  margin: 20px auto;
+  .spinner{
+    width: 30px;
+  }
+}
+
+.centred {
+  @extend %flex-fill;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-pink {
+  background-color: $pink;
+  color: $light;
+  border: 1px solid $pink;
+  &:hover{
+    background-color: transparent;
+    color: $pink;
+    border: 1px solid $pink;
+  }
+}
+
+.btn-blue {
+  background-color: $blue;
+  color: $light;
+  border: 1px solid $blue;
+  &:hover{
+    background-color: transparent;
+    color: $blue;
+    border: 1px solid $blue;
+  }
+}
+
+.featured {
+  font-size: 10vw;
+  font-weight: 800;
+  display: block;
+  text-decoration: none;
+  line-height: 1;
+  &.pink {
+    color: $pink;
+  }
+  &.light {
+    color: $light;
+  }
+}
+
+.bold {
+  font-weight: $bold;
+}
+
+
+@media (min-width: 768px){
+  .featured {
+    font-size: 5rem;
+  }
+}

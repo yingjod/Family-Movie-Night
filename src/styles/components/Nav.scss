@@ -1,0 +1,37 @@
+header {
+  @include flex-between(row)
+}
+
+.logo-icon {
+  width: 60px;
+}
+
+.nav-toggle {
+  background: none;
+  border: none;
+  span {
+    height: 3px;
+    display: block;
+    width: 40px;
+    background: $pink;
+    margin-bottom: 3px;
+  }
+}
+
+.modal-header {
+  flex-grow: 1;
+  background: $pink;
+  @include flex-center(column);
+  button {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+  nav {
+    @include flex-center(column);
+    a {
+      color: $light;
+      text-decoration: none;
+    }
+  }
+}

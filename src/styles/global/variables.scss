@@ -1,0 +1,38 @@
+$light: #faf6e7;
+$pink: #d66b58;
+$blue: #99b6c7;
+
+$bold: 800;
+
+%flex-fill{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+@mixin flex($direction, $align, $justify){
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin flex-center($direction){
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between($direction){
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin bg-center($size) {
+  background-size: $size;
+  background-position: center;
+  background-repeat: no-repeat;
+}
