@@ -9,8 +9,11 @@ import './styles/main.scss'
 //! import components
 import App from './App.jsx'
 import Home from './components/Home.jsx'
+import HotGames from './components/HotGames.jsx'
+import GameSingle from './components/GameSingle.jsx'
 
 //! import loaders
+import { getHotGames, getSingleGame } from './utils/loaders/games.js'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +23,16 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/games",
+        element: <HotGames />,
+        loader: getHotGames,
+      },
+      {
+        path: "/games/:gameId",
+        element: <GameSingle />,
+        loader: async ({ params }) => getSingleGame(params.gameId),
       },
     ],
 

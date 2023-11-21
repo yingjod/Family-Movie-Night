@@ -1,0 +1,16 @@
+
+.games-single {
+  @extend %flex-fill;
+  .row {
+    flex-grow: 1;
+  }
+}
+
+.single-detail {
+  @include flex-center(column);
+  padding: 1rem 5vw;
+}
+
+.single-image {
+  @include bg-center(80%)
+}

@@ -1,11 +1,17 @@
-
+import { Outlet } from 'react-router-dom'
+// import Nav from './components/Nav'
+// import Footer from './components/Footer'
 
 function App() {
 
 
   return (
     <>
-     <h1>Hello World</h1>
+      {/* <Nav /> */}
+      <main>
+        <Outlet />
+      </main>
+      {/* <Footer /> */}
     </>
   )
 }
