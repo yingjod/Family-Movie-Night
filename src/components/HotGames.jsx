@@ -6,10 +6,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-export default function BreadIndex() {
+export default function HotGames() {
   const games = useLoaderData()
   console.log(games)
-
 
   //! JSX
   return (
@@ -28,13 +27,12 @@ export default function BreadIndex() {
                   md={4}
                   lg={3}
                   style={{ backgroundImage: `url(${thumbnail})` }}
-                  to={`/bread/${gameId}`}
+                  to={`/games/${gameId}`}
                 >
                   {name}
                 </Col>
               )
             })}
-
           </Row>
         </Container>
       </main>
