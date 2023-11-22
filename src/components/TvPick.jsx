@@ -25,7 +25,7 @@ export default function TvPick() {
           // <img src={image} />
         )}
         <Col md={6} className='single-detail text-center'>
-          <h1 className='text-center bold display-3 mb-4'>{name}</h1>
+          <h1 className='text-center bold display-3 mb-4'>{name}</h1> 
           <div dangerouslySetInnerHTML={createSummaryMarkup()} />
         </Col>
       </Row >
