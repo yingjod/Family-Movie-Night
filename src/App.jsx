@@ -1,6 +1,6 @@
 import { Outlet, useNavigation } from 'react-router-dom'
 import Spinner from 'react-bootstrap/Spinner';
-// import Nav from './components/Nav'
+import NavBar from './components/NavBar'
 // import Footer from './components/Footer'
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   const navigation = useNavigation()
   return (
     <>
-      {/* <Nav /> */}
+      <NavBar />
       <main>
         {navigation.state === 'idle' ?
           <Outlet />

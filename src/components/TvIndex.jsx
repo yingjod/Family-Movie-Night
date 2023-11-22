@@ -12,29 +12,29 @@ export default function TvIndex() {
   // console.log(shows)
 
 
-
-
-
-
-
   //! Functions
-  const genresList = [...new Set(shows
-    .map(item => item.genres)
-    )]
+  // const genresList = [...new Set(shows
+  //   .map(item => item.genres)
+  //   )]
+  //   genresList.filter(show =>{
+  //     return show.includes("Family")
+  //   }
+  //   )
+  //   const familyGenre = genresList.filter(show =>{
+  //     return show.includes("Family")
+  //   }
+  //   )
 
-    genresList.filter(show =>{
-      return show.includes("Family")
-    }
-    )
-
-    const familyGenre = genresList.filter(show =>{
-      return show.includes("Family")
-    }
-    )
-
-    console.log(familyGenre)
+  //   console.log(familyGenre)
 
 
+  //! WHY THIS DOES NOT WORK??????????????????????????????????????????????
+  // function familyFilter(){
+  //   shows.filter(show => {
+  //         return show.genres.includes("Family")
+  //   }
+  //   )
+  // }
 
   //! JSX
   return (
@@ -45,10 +45,7 @@ export default function TvIndex() {
           <Row className="shows-list">
             {shows
               .filter(show =>{
-                console.log(show.genres)
-
                 return show.genres.includes("Family")
-                // return show.includes("Family")
               }
               )
               .map(show => {
