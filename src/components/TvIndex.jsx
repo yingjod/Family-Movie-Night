@@ -23,9 +23,9 @@ export default function TvIndex() {
                 <Col
                   as={Link}
                   key={id}
-                  xs={4}
-                  md={2}
-                  lg={2}
+                  xs={2}
+                  md={1}
+                  lg={1}
                   style={{ backgroundImage: `url("${medium}")` }}
                   to={`/shows/${id}`}
                 >

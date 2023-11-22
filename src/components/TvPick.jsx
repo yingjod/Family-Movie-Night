@@ -1,4 +1,4 @@
-import { useLoaderData, Link } from 'react-router-dom'
+import { useLoaderData } from 'react-router-dom'
 
 
 //! Bootstrap Components
@@ -8,25 +8,25 @@ import Col from 'react-bootstrap/Col'
 
 export default function TvPick() {
   const shows = useLoaderData()
-  const { id, image, name, description, image:{original} } = shows
+  const { id, name, summary, image: { original } } = shows
+  console.log(id, name, summary, original)
 
-  if (!shows) {
-    return <div>Loading...</div>;
+  //! Functions
+  function createSummaryMarkup() {
+    return { __html: `${summary}` };
   }
 
-  // console.log(expansions)
-  console.log(id, image, name, description, original)
-
+  //!JSX
   return (
     <Container fluid className='games-single'>
       < Row >
-        {image && (
+        {original && (
           <Col md={6} className='single-image' style={{ backgroundImage: `url("${original}")` }}></Col>
           // <img src={image} />
         )}
         <Col md={6} className='single-detail text-center'>
           <h1 className='text-center bold display-3 mb-4'>{name}</h1>
-          <p>{description}</p>
+          <div dangerouslySetInnerHTML={createSummaryMarkup()} />
         </Col>
       </Row >
     </Container >

@@ -121,7 +121,7 @@ header {
 }
 
 .games-list a {
-  height: 33.33vw;
+  height: 15vw;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
@@ -158,7 +158,7 @@ header {
 }
 
 .single-image {
-  background-size: 80%;
+  background-size: 50%;
   background-position: center;
   background-repeat: no-repeat;
 }/*# sourceMappingURL=main.css.map */
