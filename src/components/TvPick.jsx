@@ -8,8 +8,8 @@ import Col from 'react-bootstrap/Col'
 
 export default function TvPick() {
   const shows = useLoaderData()
-  const { id, name, summary, image: { original } } = shows
-  console.log(id, name, summary, original)
+  const { id, name, summary, language, runtime, rating: { average }, image: { original } } = shows
+  console.log(id, name, summary, original, language, runtime, average)
 
   //! Functions
   function createSummaryMarkup() {
@@ -27,6 +27,9 @@ export default function TvPick() {
         <Col md={6} className='single-detail text-center'>
           <h1 className='text-center bold display-3 mb-4'>{name}</h1> 
           <div dangerouslySetInnerHTML={createSummaryMarkup()} />
+          <div>Language: {language}</div>
+          <div>Runtime: {runtime} minutes</div>
+          <div>Rating: {average}</div>
         </Col>
       </Row >
     </Container >

@@ -12,19 +12,28 @@ export default function TvIndex() {
   // console.log(shows)
 
 
-  const genresList = [...new Set(shows.map(item => {
-    console.log(item.genres)
-    item.genres.filter(genre => {
-      console.log(genre !== 'Family') 
-    }
 
-    )
-  }))]
 
-  console.log(genresList)
+
 
 
   //! Functions
+  const genresList = [...new Set(shows
+    .map(item => item.genres)
+    )]
+
+    genresList.filter(show =>{
+      return show.includes("Family")
+    }
+    )
+
+    const familyGenre = genresList.filter(show =>{
+      return show.includes("Family")
+    }
+    )
+
+    console.log(familyGenre)
+
 
 
   //! JSX
@@ -35,11 +44,13 @@ export default function TvIndex() {
         <Container fluid>
           <Row className="shows-list">
             {shows
-              // .filter(show => {
-              //   g.filter(genre => {
-              //     return show ===
-              //   })
-              // })
+              .filter(show =>{
+                console.log(show.genres)
+
+                return show.genres.includes("Family")
+                // return show.includes("Family")
+              }
+              )
               .map(show => {
                 const { id, name, image: { medium } } = show
                 return (
