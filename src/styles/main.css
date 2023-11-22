@@ -1,4 +1,4 @@
-.games-single, .centred, main {
+.shows-single, .centred, main {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -120,8 +120,9 @@ header {
   text-decoration: none;
 }
 
-.games-list a {
-  height: 15vw;
+.shows-list a {
+  height: 40vw;
+  max-height: 300px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
@@ -133,19 +134,19 @@ header {
   color: #d66b58;
   transition: background-size 0.2s;
 }
-.games-list a:hover {
+.shows-list a:hover {
   background-size: 55%;
 }
 @media (min-width: 768px) {
-  .games-list a {
+  .shows-list a {
     background-size: 80%;
   }
-  .games-list a:hover {
+  .shows-list a:hover {
     background-size: 90%;
   }
 }
 
-.games-single .row {
+.shows-single .row {
   flex-grow: 1;
 }
 

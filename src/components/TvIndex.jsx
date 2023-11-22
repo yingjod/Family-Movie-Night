@@ -16,19 +16,22 @@ export default function TvIndex() {
       <main>
         <h1 className="text-center bold display-3 mb-4">Shows List</h1>
         <Container fluid>
-          <Row className="games-list">
+          <Row className="shows-list">
             {shows.map(show => {
               const { id, name, image: {medium} } = show
               return (
                 <Col
                   as={Link}
                   key={id}
-                  xs={2}
-                  md={1}
-                  lg={1}
+                  xs={4}
+                  s={3}
+                  md={2}
+                  lg={2}
+                  xl={1}
                   style={{ backgroundImage: `url("${medium}")` }}
                   to={`/shows/${id}`}
                 >
+                  {/* <div style={{ backgroundImage: `url("${medium}")` }}></div> */}
                   <p>{name}</p>
                 </Col>
               )

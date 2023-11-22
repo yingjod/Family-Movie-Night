@@ -18,7 +18,7 @@ export default function TvPick() {
 
   //!JSX
   return (
-    <Container fluid className='games-single'>
+    <Container fluid className='shows-single'>
       < Row >
         {original && (
           <Col md={6} className='single-image' style={{ backgroundImage: `url("${original}")` }}></Col>
