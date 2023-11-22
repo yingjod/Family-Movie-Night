@@ -6,8 +6,8 @@
 
 body {
   margin: 0;
-  background-color: #faf6e7;
-  color: #d66b58;
+  background-color: #ffffff;
+  color: #889884;
 }
 
 #root {
@@ -29,19 +29,19 @@ body {
 }
 
 .btn-pink {
-  background-color: #d66b58;
-  color: #faf6e7;
-  border: 1px solid #d66b58;
+  background-color: #889884;
+  color: #ffffff;
+  border: 1px solid #889884;
 }
 .btn-pink:hover {
   background-color: transparent;
-  color: #d66b58;
-  border: 1px solid #d66b58;
+  color: #889884;
+  border: 1px solid #889884;
 }
 
 .btn-blue {
   background-color: #99b6c7;
-  color: #faf6e7;
+  color: #ffffff;
   border: 1px solid #99b6c7;
 }
 .btn-blue:hover {
@@ -58,14 +58,21 @@ body {
   line-height: 1;
 }
 .featured.pink {
-  color: #d66b58;
+  color: #889884;
 }
 .featured.light {
-  color: #faf6e7;
+  color: #ffffff;
 }
 
 .bold {
   font-weight: 800;
+}
+
+.navBar {
+  background-color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: large;
+  color: white;
 }
 
 @media (min-width: 768px) {
@@ -92,13 +99,13 @@ header {
   height: 3px;
   display: block;
   width: 40px;
-  background: #d66b58;
+  background: #889884;
   margin-bottom: 3px;
 }
 
 .modal-header {
   flex-grow: 1;
-  background: #d66b58;
+  background: #889884;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -116,7 +123,7 @@ header {
   justify-content: center;
 }
 .modal-header nav a {
-  color: #faf6e7;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -131,7 +138,7 @@ header {
   align-items: flex-end;
   justify-content: center;
   text-decoration: none;
-  color: #d66b58;
+  color: #889884;
   transition: background-size 0.2s;
 }
 .shows-list a:hover {

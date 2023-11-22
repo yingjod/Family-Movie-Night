@@ -5,7 +5,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import spinner from '../images/spinner.gif';
+import logo2 from '../images/logo2.png';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
@@ -25,18 +25,17 @@ export default function NavBar() {
     // </>
 
     <>
-      <Navbar bg="dark" data-bs-theme="dark">
+      <Navbar className='navBar' data-bs-theme="dark">
         < Container >
           <Navbar.Brand>
-          <img
+            <img
               alt=""
-              src={spinner}
-              width="30"
+              src={logo2}
+              width="60"
               height="30"
               className="d-inline-block align-top"
             />{' '}
-            
-            React-Bootstrap</Navbar.Brand>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
