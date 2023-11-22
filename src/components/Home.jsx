@@ -9,60 +9,38 @@ import Col from 'react-bootstrap/Col';
 export default function Home() {
   const shows = useLoaderData()
 
-  //! Functions
+  const showList = [...new Set(shows)].filter(show =>{
+    return show.genres.includes("Family")
+  }
+  )
 
-// function familtyFilter(){
-//   shows.filter(show => {
-//         return show.genres.includes("Family")
-//   }
-//   )
-// }
-// console.log(familtyFilter())
-
-
-// function randomPick(){
-//   return Math.floor(Math.random())
-// }
-
+  console.log(showList)
+  const index = Math.floor(Math.random() * showList.length)
+  const randomPick = showList[index]
+  const name = randomPick.name
+  const image = randomPick.image.original
+  const id = randomPick.id
 
   //!JSX
   return (
-    <section className="centred">
-      {/* <Link to="/shows" className='btn btn-pink'>View All Shows</Link> */}
-
-      <Container fluid>
-          <Row className="shows-list">
-            {shows
-              .filter(show =>{
-                return show.genres.includes("Family")
-              }
-              )
-              .map(show => {
-                const { id, name, image: { medium } } = show
-                console.log(show)
-
-
-                return (
-                  <Col
-                    as={Link}
-                    key={5}
-                    style={{ backgroundImage: `url("${medium}")` }}
-                    to={`/shows/${id}`}
-                  >
-                    {/* <div style={{ backgroundImage: `url("${medium}")` }}></div> */}
-                    <p>{name}</p>
-                  </Col>
-                )
-              }
-              
-              )
-              }
-          </Row>
-        </Container>
-
-
-      
-    </section>
+    <Container fluid className='shows-single'>
+      < Row >
+        {image && (
+          <Col
+            as={Link}
+            key={id}
+            md={6}
+            className='single-image'
+            style={{ backgroundImage: `url("${image}")` }}
+            to={`/shows/${id}`}>
+          </Col>
+          // <img src={image} />
+        )}
+        <Col md={6} className='single-detail text-center'>
+          <h1 className='text-center bold display-3 mb-4'>{name}</h1>
+        </Col>
+      </Row >
+    </Container >
   )
 }
 
