@@ -23,10 +23,10 @@ export default function HotGames() {
                 <Col
                   as={Link}
                   key={gameId}
-                  xs={6}
+                  xs={5}
                   md={4}
                   lg={3}
-                  style={{ backgroundImage: `url(${thumbnail})` }}
+                  style={{ backgroundImage: `url("${thumbnail}")` }}
                   to={`/games/${gameId}`}
                 >
                   {name}
