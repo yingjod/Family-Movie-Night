@@ -9,11 +9,11 @@ import './styles/main.css'
 //! import components
 import App from './App.jsx'
 import Home from './components/Home.jsx'
-import HotGames from './components/HotGames.jsx'
-import GameSingle from './components/GameSingle.jsx'
+import TvIndex from './components/TvIndex.jsx'
+import TvPick from './components/TvPick.jsx'
 
 //! import loaders
-import { getHotGames, getSingleGame } from './utils/loaders/games.js'
+import { getTvIndex, getTvPick } from './utils/loaders/shows.js'
 
 const router = createBrowserRouter([
   {
@@ -25,14 +25,14 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/games",
-        element: <HotGames />,
-        loader: getHotGames,
+        path: "/shows",
+        element: <TvIndex />,
+        loader: getTvIndex,
       },
       {
-        path: "/games/:gameId",
-        element: <GameSingle />,
-        loader: async ({ params }) => getSingleGame(params.gameId),
+        path: "/shows/:id",
+        element: <TvPick />,
+        loader: async ({ params }) => getTvPick(params.id),
       },
     ],
 
