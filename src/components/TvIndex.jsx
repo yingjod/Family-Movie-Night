@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom"
-import { Link, Form } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
 
@@ -8,7 +8,7 @@ import { useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Dropdown from 'react-bootstrap/Dropdown'
+// import Dropdown from 'react-bootstrap/Dropdown'
 
 export default function TvIndex() {
   const shows = useLoaderData()
@@ -37,7 +37,7 @@ export default function TvIndex() {
   //! JSX
   return (
     <>
-      <section className="container">
+      <section className="searchContainer">
         <form onSubmit={handleSubmit}>
           <select
             className="genres-list"
@@ -52,7 +52,7 @@ export default function TvIndex() {
           </select>
           <input
             placeholder="Search..."
-            id="search"
+            className="search"
             onChange={(e) => setSearch(e.target.value)}
             value={search}
           />
@@ -115,7 +115,7 @@ export default function TvIndex() {
                       <Row sm={9} className="movietittle" style={{ backgroundImage: `url("${medium}")` }}></Row>
                       <Row sm={3} className="movietittle">{name}</Row>
                     </Container> */}
-                    <div >
+                    <div className="rails">
                       <img className="thumbnail" src={medium} to={`/shows/${id}`} />
                       <p className="movietittle">{name}</p>
                     </div>

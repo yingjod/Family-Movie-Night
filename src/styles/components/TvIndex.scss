@@ -2,9 +2,9 @@
   a {
     height: 100%;
     // max-height: 350px;
-    margin-top: 50px;
-    // margin-bottom: 50px;
-    background-color: rgb(15, 14, 14);
+    margin-top: 30px;
+    // margin-bottom: 10px;
+    background-image: url('../images/Curtain.png');
     // background-position: center;
     // background-repeat: no-repeat;
     // background-size: 50%;
@@ -14,11 +14,14 @@
     transition: background-size 0.2s;
     padding-top: 4%;
     padding-bottom: 1%;
+    text-align: center;
+
+
 
     // Effects
-    &:hover {
-      background-size: 55%;
-    }
+    // &:hover {
+    //   background-size: 55%;
+    // }
 
     // Media queries
     // @media (min-width: 768px){
@@ -30,17 +33,55 @@
   }
 }
 
-.movietittle{
+.movietittle {
   color: rgb(255, 255, 255);
   padding-top: 1em;
-  padding-bottom: 1em;
+  // padding-bottom: 1em;
   height: 3em;
   text-align: center;
+  font-size: 18px;
 }
 
-.thumbnail{
+.thumbnail {
   width: 80%;
   border: 10px solid;
-  border-radius:15px;
-  
+  border-radius: 15px;
+  // transition: size 0.2s;
+
+  // &:hover {
+  //   width: 70%;
 }
+
+
+.genres-list {
+  background-color: grey;
+  color: white;
+  font-weight: bold;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+.genres-list:hover{
+  box-shadow: inset 3px 3px lightgrey ;
+}
+
+.search {
+  color:  gray;
+  margin: 10px;
+  margin-left: 1px;
+  padding: 5px;
+  border-radius: 10px;
+  border:1px bold rgb(177, 172, 172);
+  height: 50px;
+  font-size: 20px;
+  // cursor: pointer;
+}
+
+.container-fluid{
+background-color: white;
+}
+ 

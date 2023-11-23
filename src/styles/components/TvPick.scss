@@ -7,11 +7,20 @@
 }
 
 .single-detail {
-  @include flex-center(column);
-  padding: 1rem 5vw;
+  @include flex(column, left, center);
+  padding: 0 5vw;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif, cursive;
 }
 
 .single-image {
-  @include bg-center(50%
-  )
+  @include bg-center(80%)
+  
 }
+
+    @media (max-width: 768px){
+      .single-image {
+        display:none
+      }
+    }
+

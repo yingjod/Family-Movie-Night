@@ -5,7 +5,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import logo2 from '../images/logo2.png';
+import family from '../images/familymovienight1.png';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
@@ -30,16 +30,16 @@ export default function NavBar() {
           <Navbar.Brand>
             <img
               alt=""
-              src={logo2}
-              width="60"
-              height="30"
+              src={family}
+              width="100"
+              // height="60"
               className="d-inline-block align-top"
             />{' '}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href={"/"}>Home</Nav.Link>
+              <Nav.Link href={"/"} >Home</Nav.Link>
               <Nav.Link href={"/shows"}>Index</Nav.Link>
             </Nav>
           </Navbar.Collapse>

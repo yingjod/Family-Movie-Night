@@ -22,15 +22,14 @@ export default function TvPick() {
       < Row >
         {original && (
           <Col md={6} className='single-image' style={{ backgroundImage: `url("${original}")` }}></Col>
-          // <img src={image} />
         )}
-        <Col md={6} className='single-detail text-center'>
-          <h1 className='text-center bold display-3 mb-4'>{name}</h1>
+        <Col md={6} className='single-detail text-left' style={{ backgroundColor:"black" }}>
+          <h1 className='bold display-3 mb-4'>{name}</h1>
           <div dangerouslySetInnerHTML={createSummaryMarkup()} />
-          <div>Language: {language}</div>
-          <div>Runtime: {runtime} minutes</div>
-          <div>Rating: {average}</div>
-          <div>Genres: {genres.join(' | ')}</div>
+          <div><b>Language:</b> {language}</div>
+          <div><b>Runtime:</b> {runtime} minutes</div>
+          <div><b>Rating:</b> {average}</div>
+          <div><b>Genres:</b> {genres.join(' | ')}</div>
         </Col>
       </Row >
     </Container >

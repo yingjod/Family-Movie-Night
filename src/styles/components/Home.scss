@@ -1,0 +1,50 @@
+.homeText {
+  text-align: center;
+  color: aquamarine;
+  @include flex(column, left, center);
+  padding: 0 5vw;
+}
+
+.homeImageContainer {
+  margin-left: 0px
+}
+
+.homeContent {
+  @include flex-center(column);
+  justify-content: center;
+  height: 100vh;
+  padding-bottom: 10rem;
+
+}
+
+.homeimg {
+  width: 20%;
+  background-color: aqua;
+  // height: 100%;
+}
+
+.movieimg {
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  margin-right: 0;
+  background-image: url('../images/Curtain.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.homeImage {
+  @include bg-center(80%)
+}
+
+@media (max-width: 768px) {
+  .single-image {
+    display: none
+  }
+}
+
+
+.topimg {
+  width: 30%;
+}
