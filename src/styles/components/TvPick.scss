@@ -14,8 +14,9 @@
 }
 
 .single-image {
-  @include bg-center(80%)
-  
+  @include bg-center(contain);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
     @media (max-width: 768px){

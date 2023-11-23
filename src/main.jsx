@@ -11,9 +11,10 @@ import App from './App.jsx'
 import Home from './components/Home.jsx'
 import TvIndex from './components/TvIndex.jsx'
 import TvPick from './components/TvPick.jsx'
+import Cast from './components/Cast.jsx'
 
 //! import loaders
-import { getTvIndex, getTvPick } from './utils/loaders/shows.js'
+import { getTvIndex, getTvPick, getCast } from './utils/loaders/shows.js'
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
         path: "/shows/:id",
         element: <TvPick />,
         loader: async ({ params }) => getTvPick(params.id),
+      },
+      {
+        path: "/shows/:id/cast",
+        element: <Cast />,
+        loader: async ({ params }) => getCast(params.id),
       },
     ],
 

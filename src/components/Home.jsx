@@ -19,7 +19,7 @@ export default function Home() {
   // console.log(showList)
   const index = Math.floor(Math.random() * showList.length)
   const randomPick = showList[index]
-  const name = randomPick.name
+  // const name = randomPick.name
   const image = randomPick.image.original
   const id = randomPick.id
 

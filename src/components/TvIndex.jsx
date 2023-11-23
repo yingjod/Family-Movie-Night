@@ -59,29 +59,6 @@ export default function TvIndex() {
         </form>
       </section>
 
-
-      {/* <Form onSubmit={handleSubmit}>
-        <Dropdown
-          onChange={(e) => setGenrePick(e.target.value)}
-          value={genrePick}
-        >
-          <Dropdown.Menu
-          >
-            {genreList
-              .map((genreChoice, i) => {
-                return <Dropdown.Item key={i} value={genreChoice}>{genreChoice}</Dropdown.Item>
-              })
-            }
-          </Dropdown.Menu>
-
-          <Dropdown.Toggle variant="success" id="dropdown-basic"
-          >
-            {genrePick}
-          </Dropdown.Toggle>
-
-        </Dropdown>
-      </Form> */}
-
       <main>
         {/* <h1 className="bold display-3 mb-4">Shows List</h1> */}
         <Container fluid>
@@ -119,10 +96,7 @@ export default function TvIndex() {
                       <img className="thumbnail" src={medium} to={`/shows/${id}`} />
                       <p className="movietittle">{name}</p>
                     </div>
-
                   </Col>
-
-
 
                 )
               })}
