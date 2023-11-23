@@ -27,7 +27,7 @@ export default function TvIndex() {
   // console.log(genreList)
 
   const [genrePick, setGenrePick] = useState('All')
-  // console.log(typeof genrePick)
+  const [search, setSearch] = useState('')
 
   //! Functions
   function handleSubmit(e) {
@@ -38,23 +38,29 @@ export default function TvIndex() {
   return (
     <>
       <section className="container">
-          <form onSubmit={handleSubmit}>
-            <select
-              className="genres-list"
-              onChange={(e) => setGenrePick(e.target.value)}
-              value={genrePick}
-            >
-              {genreList
-                .map((genreChoice, i) => {  
-                  return <option key={i} value={genreChoice}>{genreChoice}</option>
-                })
-              }
-            </select>
-          </form>
-        </section>
+        <form onSubmit={handleSubmit}>
+          <select
+            className="genres-list"
+            onChange={(e) => setGenrePick(e.target.value)}
+            value={genrePick}
+          >
+            {genreList
+              .map((genreChoice, i) => {
+                return <option key={i} value={genreChoice}>{genreChoice}</option>
+              })
+            }
+          </select>
+          <input
+            placeholder="Search..."
+            id="search"
+            onChange={(e) => setSearch(e.target.value)}
+            value={search}
+          />
+        </form>
+      </section>
 
 
-      <Form onSubmit={handleSubmit}>
+      {/* <Form onSubmit={handleSubmit}>
         <Dropdown
           onChange={(e) => setGenrePick(e.target.value)}
           value={genrePick}
@@ -74,7 +80,7 @@ export default function TvIndex() {
           </Dropdown.Toggle>
 
         </Dropdown>
-      </Form>
+      </Form> */}
 
       <main>
         {/* <h1 className="bold display-3 mb-4">Shows List</h1> */}
@@ -82,16 +88,15 @@ export default function TvIndex() {
           <Row className="shows-list">
             {shows
               .filter(show => {
-                // console.log(genrePick)
-                if (genrePick === 'All'){
-                  return show.genres
-                } else{
-                  return (
-                    show.genres.includes(genrePick)
-                  )
+                const pattern = new RegExp(search, 'i')
+                if (genrePick === 'All') {
+                  return pattern.test(show.name)
+                } else if (show.genres.includes(genrePick)) {
+                  return pattern.test(show.name)
                 }
               }
               )
+              .sort((a, b) => a.name.localeCompare(b.name))
               .map(show => {
                 const { id, name, image: { medium } } = show
                 return (
@@ -100,13 +105,21 @@ export default function TvIndex() {
                     key={id}
                     xs={4}
                     s={3}
-                    md={4}
+                    md={3}
                     lg={2}
-                    xl={1}
-                    style={{ backgroundImage: `url("${medium}")` }}
+                    xl={2}
+                    // style={ {backgroundColor: "black"}}
                     to={`/shows/${id}`}
                   >
-                    <p>{name}</p>
+                    {/* <Container>
+                      <Row sm={9} className="movietittle" style={{ backgroundImage: `url("${medium}")` }}></Row>
+                      <Row sm={3} className="movietittle">{name}</Row>
+                    </Container> */}
+                    <div >
+                      <img className="thumbnail" src={medium} to={`/shows/${id}`} />
+                      <p className="movietittle">{name}</p>
+                    </div>
+
                   </Col>
 
 
@@ -115,7 +128,7 @@ export default function TvIndex() {
               })}
           </Row>
         </Container>
-      </main>
+      </main >
     </>
   )
 }

@@ -1,14 +1,19 @@
 .shows-list {
   a {
-    height: 40vw;
-    max-height: 300px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 50%;
-    @include flex(row, flex-end, center);
+    height: 100%;
+    // max-height: 350px;
+    margin-top: 50px;
+    // margin-bottom: 50px;
+    background-color: rgb(15, 14, 14);
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: 50%;
+    @include flex(row, flex-start, center);
     text-decoration: none;
-    color: $pink;
+    color: $light;
     transition: background-size 0.2s;
+    padding-top: 4%;
+    padding-bottom: 1%;
 
     // Effects
     &:hover {
@@ -16,11 +21,26 @@
     }
 
     // Media queries
-    @media (min-width: 768px){
-      background-size: 80%;
-      &:hover {
-        background-size: 90%;
-      }
-    }
+    // @media (min-width: 768px){
+    //   background-size: 80%;
+    //   &:hover {
+    //     background-size: 90%;
+    //   }
+    // }
   }
+}
+
+.movietittle{
+  color: rgb(255, 255, 255);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  height: 3em;
+  text-align: center;
+}
+
+.thumbnail{
+  width: 80%;
+  border: 10px solid;
+  border-radius:15px;
+  
 }

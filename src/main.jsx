@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 //! Styles
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/main.css'
+import './styles/main.scss'
 
 //! import components
 import App from './App.jsx'
