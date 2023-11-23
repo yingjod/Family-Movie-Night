@@ -14,7 +14,7 @@ export default function Home() {
   }
   )
 
-  console.log(showList)
+  // console.log(showList)
   const index = Math.floor(Math.random() * showList.length)
   const randomPick = showList[index]
   const name = randomPick.name
