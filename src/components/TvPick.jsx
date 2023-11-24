@@ -27,13 +27,15 @@ export default function TvPick() {
         <Col md={6} className='single-detail text-left' style={{ backgroundColor: "black" }}>
           <h1 className='bold display-3 mb-4'>{name}</h1>
           <div dangerouslySetInnerHTML={createSummaryMarkup()} />
+          <Link to={`/shows/${id}/cast`} style={{textDecoration: "none"} } className='castButton'><b>See Cast</b></Link>
           <div><b>Language:</b> {language}</div>
           <div><b>Runtime:</b> {runtime} minutes</div>
           <div><b>Rating:</b> {average}</div>
           <div><b>Genres:</b> {genres.join(' | ')}</div>
-          <Link to={`/shows/${id}/cast`} style={{textDecoration: "none"}} ><b>Cast:</b></Link>
-          <Link to={officialSite} style={{textDecoration: "none"}}><b style={{color:"white"}}>Official Site:</b> {officialSite}</Link>
-      </Col>
+          {officialSite && (
+          <Link to={officialSite} style={{textDecoration: "none", color:"white"}}><b style={{textDecoration: "none", color:"white"}}>Official Site:</b> <span style={{textDecoration: "underline"}}>{officialSite}</span></Link>
+          )}
+          </Col>
     </Row >
     </Container >
   )
