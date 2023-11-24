@@ -28,6 +28,7 @@ export default function TvIndex() {
 
   const [genrePick, setGenrePick] = useState('All')
   const [search, setSearch] = useState('')
+  const [sortChoice, setSortChoice] = useState('Sort by:')
 
   //! Functions
   function handleSubmit(e) {
@@ -39,6 +40,19 @@ export default function TvIndex() {
     <>
       <section className="searchContainer">
         <form onSubmit={handleSubmit}>
+        <select
+            className="genres-list"
+            onChange={(e) => setSortChoice(e.target.value)}
+            value={sortChoice}
+          >
+            {<>
+              <option>Sort by:</option>
+              <option value={'alphabetical'}>Alphabetical</option>
+              <option value={'rating'}>Rating</option>
+            </>
+            }
+          </select>
+
           <select
             className="genres-list"
             onChange={(e) => setGenrePick(e.target.value)}
@@ -73,7 +87,16 @@ export default function TvIndex() {
                 }
               }
               )
-              .sort((a, b) => a.name.localeCompare(b.name))
+              .sort((a, b) => {
+                if (sortChoice === 'rating'){
+                  console.log(typeof b.rating.average)
+                  return b.rating.average - a.rating.average
+                  
+                } else if (sortChoice === 'alphabetical') {
+               
+                  return a.name.localeCompare(b.name)
+                }
+              })
               .map(show => {
                 const { id, name, image: { medium } } = show
                 return (
@@ -94,7 +117,9 @@ export default function TvIndex() {
                     </Container> */}
                     <div className="rails">
                       <img className="thumbnail" src={medium} to={`/shows/${id}`} />
-                      <p className="movietittle">{name}</p>
+                      <div className="movietittle">
+                      <p>{name}<br></br>★Rating: {show.rating.average}</p>
+                      </div>
                     </div>
                   </Col>
 
