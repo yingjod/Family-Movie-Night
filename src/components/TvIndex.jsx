@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { useLoaderData } from "react-router-dom"
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
@@ -8,12 +10,9 @@ import { useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-// import Dropdown from 'react-bootstrap/Dropdown'
 
 export default function TvIndex() {
   const shows = useLoaderData()
-  // console.log(shows)
-
 
   const genresAll = []
   const genreSets = [...new Set(shows.map(show => show.genres))]
@@ -24,7 +23,6 @@ export default function TvIndex() {
     })
   })
   const genreList = genresAll.filter((value, index) => genresAll.indexOf(value) === index)
-  // console.log(genreList)
 
   const [genrePick, setGenrePick] = useState('All')
   const [search, setSearch] = useState('')
@@ -74,7 +72,6 @@ export default function TvIndex() {
       </section>
 
       <main>
-        {/* <h1 className="bold display-3 mb-4">Shows List</h1> */}
         <Container fluid>
           <Row className="shows-list">
             {shows
@@ -93,7 +90,7 @@ export default function TvIndex() {
                   return b.rating.average - a.rating.average
                   
                 } else if (sortChoice === 'alphabetical') {
-               
+
                   return a.name.localeCompare(b.name)
                 }
               })
@@ -108,17 +105,12 @@ export default function TvIndex() {
                     md={3}
                     lg={2}
                     xl={2}
-                    // style={ {backgroundColor: "black"}}
                     to={`/shows/${id}`}
                   >
-                    {/* <Container>
-                      <Row sm={9} className="movietittle" style={{ backgroundImage: `url("${medium}")` }}></Row>
-                      <Row sm={3} className="movietittle">{name}</Row>
-                    </Container> */}
                     <div className="rails">
                       <img className="thumbnail" src={medium} to={`/shows/${id}`} />
                       <div className="movietittle">
-                      <p>{name}<br></br>★Rating: {show.rating.average}</p>
+                        <p>{name}<br></br>★Rating: {show.rating.average}</p>
                       </div>
                     </div>
                   </Col>

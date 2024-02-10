@@ -1,6 +1,6 @@
 import { useLoaderData } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-
+import React from 'react'
 
 //! Bootstrap Components
 import Container from 'react-bootstrap/Container'
@@ -24,10 +24,10 @@ export default function TvPick() {
         {original && (
           <Col md={6} className='single-image' style={{ backgroundImage: `url("${original}")` }}></Col>
         )}
-        <Col md={6} className='single-detail text-left' style={{ backgroundColor: "black" }}>
+        <Col md={6} className='single-detail text-left' style={{ backgroundColor: 'black' }}>
           <h1 className='bold display-3 mb-4'>{name}</h1>
           <div dangerouslySetInnerHTML={createSummaryMarkup()} />
-          <Link to={`/shows/${id}/cast`} style={{ textDecoration: "none" }} className='castButton'><b>See Cast</b></Link>
+          <Link to={`/shows/${id}/cast`} style={{ textDecoration: 'none' }} className='castButton'><b>See Cast</b></Link>
           {language && (
             <div><b>Language:</b> {language}</div>
           )}
@@ -41,7 +41,7 @@ export default function TvPick() {
             <div><b>Genres:</b> {genres.join(' | ')}</div>
           )}
           {officialSite && (
-            <Link to={officialSite} style={{ textDecoration: "none", color: "white" }}><b style={{ textDecoration: "none", color: "white" }}>Official Site:</b> <span style={{ textDecoration: "underline" }}>{officialSite}</span></Link>
+            <Link to={officialSite} style={{ textDecoration: 'none', color: 'white' }}><b style={{ textDecoration: 'none', color: 'white' }}>Official Site:</b> <span style={{ textDecoration: "underline" }}>{officialSite}</span></Link>
           )}
         </Col>
       </Row >

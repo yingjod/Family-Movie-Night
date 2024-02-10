@@ -2,9 +2,6 @@ import { useLoaderData } from "react-router-dom"
 import { Link } from 'react-router-dom'
 
 //! Bootstrap components
-// import Container from 'react-bootstrap/Container';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
 import family from '../images/familymovienight1.png';
 
 
@@ -16,10 +13,8 @@ export default function Home() {
   }
   )
 
-  // console.log(showList)
   const index = Math.floor(Math.random() * showList.length)
   const randomPick = showList[index]
-  // const name = randomPick.name
   const image = randomPick.image.original
   const id = randomPick.id
 

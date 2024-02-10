@@ -1,13 +1,8 @@
 .shows-list {
   a {
     height: 100%;
-    // max-height: 428px;
     margin-top: 30px;
-    // margin-bottom: 10px;
     background-image: url('../images/Curtain.png');
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: 50%;
     @include flex(row, flex-start, center);
     text-decoration: none;
     color: $light;
@@ -16,20 +11,6 @@
     padding-bottom: 5%;
     text-align: center;
 
-
-
-    // Effects
-    // &:hover {
-    //   background-size: 55%;
-    // }
-
-    // Media queries
-    // @media (min-width: 768px){
-    //   background-size: 80%;
-    //   &:hover {
-    //     background-size: 90%;
-    //   }
-    // }
   }
 }
 
@@ -40,25 +21,17 @@
 .movietittle {
   color: rgb(245, 242, 242);
   padding-top: 1em;
-  // padding-bottom: 1em;
   height: 3em;
   text-align: center;
   font-size: 18px;
-  // max-width: 80%;
-  
 }
 
 
 .thumbnail {
   height: 80%;
   width: 80%;
-  // max-height: 300px;
   border: 10px solid;
   border-radius: 15px;
-  // transition: size 0.2s;
-
-  // &:hover {
-  //   width: 70%;
 }
 
 
@@ -87,7 +60,6 @@
   border:1px bold rgb(177, 172, 172);
   height: 50px;
   font-size: 20px;
-  // cursor: pointer;
 }
 
 .container-fluid{
