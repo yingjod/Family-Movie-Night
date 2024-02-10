@@ -6,7 +6,7 @@ Family Movie Night is a website built by API. When you load the page, The Home p
 
 ## Deployment link
 
-[GitHub Pages](https://familymovienight.netlify.app/).
+[Netlify Pages](https://familymovienight.netlify.app/).
 
 ## Getting Started/Code Installation
 
