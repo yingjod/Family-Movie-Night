@@ -62,7 +62,7 @@ Anne-Laure and I collaborated on this project, designing a website consisting of
 
 ## Build/Code Process
 
-- Day 1
+- Day 1 : 
   On the first day, my partner and I kicked off the project by sketching out the wireframe for our website. We discussed the user interface design and layout, ensuring a user-friendly experience. After finalizing the wireframe, we made a collective decision on the API source to use for fetching movie data.With the wireframe as our guide, we proceeded to set up the foundational components of our project. Utilizing React-Bootstrap, we established a responsive grid layout, providing a structured framework for our website's design. Here's a snippet of our grid setup:
 
 ![code1](/src/images/readme/code1.png)
@@ -73,7 +73,7 @@ In addition to the grid layout, we implemented routing using React Router, enabl
 
 
 
-- Day 2
+- Day 2 : 
   On the second day, we focused on enhancing the functionality and visual appeal of our website. We implemented a sorting function on the index page, allowing users to sort movies.
 Here's a snippet demonstrating our sorting function:
 
