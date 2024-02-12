@@ -103,6 +103,8 @@ The initial experience of working on a project with others was valuable in learn
 
 ## Bugs
 
+No bugs
+
 ## Future Improvements
 
 An improved display would be more effective for the cast page. Currently, it shows each character individually, which is inconvenient when the same person plays different roles in a movie. Multiple occurrences of the same picture and name make it challenging to read. I would like to organise all characters under each person, creating a tidy and aesthetically pleasing page.
